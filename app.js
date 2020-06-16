@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
             current = theTetrominoes[random][currentRotation];
             currentPosition = 4;
             draw();
+            displayShape();
         }
     }
 
@@ -168,7 +169,7 @@ let displayIndex = 0;
 
 //The tetrominos without rotations
 const upNextTetrominoes = [
-    [1, displayWidth+1, displaywidth*2+1, 2],
+    [1, displayWidth+1, displayWidth*2+1, 2],
     [0, displayWidth, displayWidth+1, displayWidth*2+1],
     [1, displayWidth, displayWidth+1, displayWidth+2],
     [0, 1, displayWidth, displayWidth+1],
@@ -179,10 +180,13 @@ function displayShape() {
     displaySquares.forEach(square => {
         square.classList.remove('tetromino')
     })
-    upNextTetrominoes[nextRandom].forEach((index => {
+    // For each square that makes up the now randomly selected up-next tetromino, we want to add the class tetromino to it.
+    upNextTetrominoes[nextRandom].forEach(index => {
         displaySquares[displayIndex + index].classList.add('tetromino')
-    }))
+    })
 }
+
+//asdfasdfas
 
 // squares holds all of the squares that are contained in the grid [0-199] in row major order.
 // current holds an array that contains the information that says the block type and the rotation position. (based on an index into a 2d array)  (let current = theTetrominoes[random][currentRotation])
