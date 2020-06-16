@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+}
+
+/*This is to style the class .grid in the HTML file, since we want the pixels to be 20x20, the grid as a whole must be 200*400 if we want a 10 width:20 height grid*/
+.grid {
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: burlywood;
+}
+
+
+/*This is to style the individual divs in the grid.*/
+.grid div {
+    height: 20px;
+    width: 20px;
+}
+
+.tetromino {
+    background-color: blue;
+}
+
+.mini-grid {
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: beige;
+}
+
+/*This describes the divs inside the mini-grid*/
+.mini-grid div {
+    height: 20px;
+    width: 20px;
+}
